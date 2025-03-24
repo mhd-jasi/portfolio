@@ -1,0 +1,947 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.contact-bg {
+    background:
+    radial-gradient(circle at bottom left, hsl(300, 100%, 33%), transparent 90%),
+    radial-gradient(circle at top right, #00aabb, transparent 60%),
+    linear-gradient(135deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.768) 100%),
+    url('../photos/pattern2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    box-shadow: inset 0 0 100px rgba(255, 255, 255, 0);
+}
+
+.contact-header h1 {
+    font-size: 50px;
+    font-weight: 900;
+    color: white;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+
+.contact-form {
+    display: flex;
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.media {
+    margin-left: 90px;
+    
+}
+
+.drop-me{
+    animation: slideInLeft 1.5s ease-in-out;
+}
+.drop-me h1 {
+    color: white;
+    font-size: 50px;
+    
+}
+.drop-me p {
+    color: white;
+    font-size: 23px;
+   
+}
+
+.phone i {
+    color: white;
+    padding: 10px;
+    background: linear-gradient(to top right, #00eaff, #ff00ff);
+    font-size: 20px;
+    border-radius: 10px;
+   
+}
+
+.phone span {
+    color: white;
+    font-size: 20px;
+    margin-left: 10px;
+    
+
+}
+
+.message {
+    margin-top: 20px;
+ 
+}
+.message i {
+    color: white;
+    padding: 10px;
+    background: linear-gradient(to top right, #00eaff, #ff00ff);
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+.message span {
+    color: white;
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.location {
+    margin-top: 20px;
+  
+}
+.location i {
+    color: white;
+    padding: 10px 13px;
+    background: linear-gradient(to top right, #00eaff, #ff00ff);
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+.location span {
+    color: white;
+    font-size: 20px;
+    margin-left: 10px;
+    display: inline-block;
+    position: absolute;
+}
+@keyframes fadeInUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.follow {
+    margin-top: 30px;
+    border-top: 1px solid black;
+    display: flex;
+    align-items: center;
+    animation: fadeInUp 1.5s ease-in-out;
+    color: white;
+}
+.follow-me h1 {
+    font-size: 40px;
+    margin-top: 5px;
+}
+
+.facebook i {
+    color: white;
+    padding: 15px 18px;
+    background: linear-gradient(to top right, #00eaff, #ff00ff);
+    font-size: 30px;
+    border-radius: 10px;
+    margin-left: 90px;
+    margin-right: 20px;
+    margin-top: -25px;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.whatsapp i {
+    color: white;
+    padding: 15px 15px;
+    background: linear-gradient(to top right, #00eaff, #ff00ff);
+    font-size: 30px;
+    border-radius: 10px;
+    margin-right: 20px;
+    margin-top: -25px;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.instagram i {
+    color: white;
+    padding: 15px 15px;
+    background: linear-gradient(to top right, #00eaff, #ff00ff);
+    font-size: 30px;
+    border-radius: 10px;
+    margin-right: 20px;
+    margin-top: -25px;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.telegram i {
+    color: white;
+    padding: 15px 15px;
+    background: linear-gradient(to top right, #00eaff, #ff00ff);
+    font-size: 30px;
+    border-radius: 10px;
+    margin-top: -25px;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.facebook i:hover,
+.whatsapp i:hover,
+.instagram i:hover,
+.telegram i:hover {
+    box-shadow: 0 0 10px #00eaff, 0 0 20px #ff00ff;
+    /* border-radius: 50%; */
+    transform: scale(1.1);
+}
+
+@keyframes fadeInRight {
+    from {
+        transform: translateX(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+.contact-body {
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    height: 60vh;
+    padding: 40px 20px;
+    border: 2px solid white;
+    border-radius: 20px;
+    margin-left: auto;
+    margin-right: 150px;
+    background: linear-gradient(#ff00ff, #00aabb);
+    animation: fadeInRight 1.5s ease-in-out;
+}
+
+::placeholder {
+    font-size: 20px;
+    font-weight: 100;
+    color: rgb(255, 255, 255);
+    opacity: 1;
+}
+
+.contact-name input,
+.contact-email input,
+.contact-phone input,
+.contact-message textarea {
+    width: 90%;
+    padding: 20px;
+    margin: 5px;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    background: black;
+    color: white;
+    font-size: 20px;
+}
+
+.contact-name input:hover,
+.contact-email input:hover,
+.contact-phone input:hover,
+.contact-message textarea:hover {
+    background: #ffffff5c;
+    border: 1px solid white;
+}
+
+.contact-name input:hover::placeholder,
+.contact-email input:hover::placeholder,
+.contact-phone input:hover::placeholder,
+.contact-message textarea:hover::placeholder {
+    color: black;
+}
+
+.contact-name input:focus,
+.contact-email input:focus,
+.contact-phone input:focus,
+.contact-message textarea:focus {
+    border: 2px solid white;
+    outline: none;
+    background: black;
+    color: white;
+}
+
+.contact-message textarea {
+    padding: 10px 20px 110px;
+    resize: none;
+}
+
+.contact-body button {
+    padding: 10px;
+    background: black;
+    color: white;
+    width: 20%;
+    border: 1px solid black;
+    border-radius: 9px;
+    font-size: 18px;
+    margin-left: auto;
+    margin-right: 8px;
+}
+
+.contact-body button:hover {
+    background: #00eaff;
+    color: white;
+    box-shadow: 0px 0px 10px #ff00ff;
+    border: #00eaff;
+    color: black;
+}
+
+@media screen and (max-width: 1024px) {
+    .contact-bg {
+        background-attachment: fixed;
+        /* box-shadow: inset 0 0 50px rgba(255, 255, 255, 0.1); */
+    }
+
+    .contact-header h1 {
+        font-size: 35px;
+        text-align: left;
+        margin-top: 15px;
+    }
+
+    .contact-form {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: 20px;
+        margin-bottom: 80px;
+    }
+
+    .media {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .drop-me h1 {
+        font-size: 40px;
+        text-align: center;
+    }
+
+    .drop-me p {
+        /* white-space:nowrap; */
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .phone,
+    .message,
+    .location {
+        text-align: left;
+    }
+
+
+    .follow {
+        flex-direction: row;
+        align-items: center;
+        text-align: left;
+        width: 100%;
+    }
+
+    .follow h1{
+        font-size: 40px;
+        margin-right: 20px;
+    }
+
+    .facebook i,
+    .whatsapp i,
+    .instagram i,
+    .telegram i {
+        margin: 10px 8px;
+    }
+
+    .contact-body {
+        position: absolute;
+        right: 20px;
+        width: 40%;
+        height:auto;
+        margin: 20px auto;
+        padding: 20px;
+    }
+
+    .contact-body button {
+        width: 40%;
+        font-size: 16px;
+        padding: 15px;
+        margin: 10px 5px;
+        margin-left:  auto;
+    }
+
+    .contact-name input,
+    .contact-email input,
+    .contact-phone input,
+    .contact-message textarea {
+        width: 90%;
+    }
+}
+
+
+@media screen and (max-width: 780px) {
+    .contact-bg {
+        background-attachment: fixed;
+        /* box-shadow: inset 0 0 50px rgba(255, 255, 255, 0.1); */
+    }
+
+    .contact-header h1 {
+        font-size: 40px;
+        text-align: center;
+        margin-top: 15px;
+    }
+
+    .contact-form {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .media {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .drop-me h1 {
+        font-size: 45px;
+        text-align: center;
+        margin-top: -5px;
+    }
+
+    .drop-me p {
+        white-space:nowrap;
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .phone,
+    .message,
+    .location {
+        text-align: left;
+        margin-left: 15px;
+    }
+
+    .phone span,
+    .message span{
+        font-size: 28px;
+    }
+
+    
+
+    .location span {
+        position: absolute;
+        font-size: 25px;
+    }
+
+    .follow {
+        white-space: nowrap;
+        position: absolute;
+        bottom: -560px;
+        flex-direction: row;
+        align-items: center;
+        text-align: left;
+        margin: 5px;
+        margin-left: -15px;
+        width: 85%;
+    }
+
+    .follow h1{
+        font-size: 35px;
+        margin-left: 100px;
+        margin-right: 50px;
+    }
+
+    .follow-me{
+        white-space: nowrap;
+    }
+
+    .facebook i,
+    .whatsapp i,
+    .instagram i,
+    .telegram i {
+        margin: 10px 12px;
+        font-size: 36px;
+        padding: 10px;
+    }
+
+    .facebook i{
+        padding: 10px 15px;
+
+    }
+
+    .contact-body {
+        width: 70%;
+        height: auto;
+        /* margin: 20px auto; */
+        padding: 20px;
+        margin-top: 380px;
+        margin-right: 60px;
+    }
+
+    .contact-body button {
+        width: 40%;
+        font-size: 16px;
+        padding: 15px;
+        margin: 10px 5px;
+        margin-left:  auto;
+    }
+
+    .contact-name input,
+    .contact-email input,
+    .contact-phone input,
+    .contact-message textarea {
+        width: 90%;
+        height: auto;
+    }
+}
+
+/* Styles for 425px screens */
+/* Styles for screens up to 480px */
+@media screen and (max-width: 480px) {
+    .contact-bg {
+        background-attachment: fixed;
+    }
+
+    .contact-header h1 {
+        font-size: 35px;
+        text-align: center;
+        margin-top: 15px;
+    }
+
+    .contact-form {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .media {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .drop-me h1 {
+        font-size: 40px;
+        text-align: center;
+        margin-right:20px ;
+        margin-top: -5px;
+    }
+
+    .drop-me p {
+        white-space: nowrap;
+        font-size: 15px;
+        text-align: center;
+        margin-right: 20px;
+    }
+
+    .phone,
+    .message,
+    .location {
+        text-align: left;
+        margin-left: 10px;
+    }
+
+    .phone span,
+    .message span{
+        font-size: 20px;
+    }
+
+    .location span {
+        position: absolute;
+        font-size: 18px;
+    }
+
+    .follow {
+        white-space: nowrap;
+        position: absolute;
+        bottom: -470px;
+        flex-direction: row;
+        align-items: center;
+        text-align: left;
+        margin: 5px;
+        margin-left: 10px;
+        width: 85%;
+    }
+
+    .follow h1 {
+        font-size: 30px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .follow-me {
+        white-space: nowrap;
+    }
+
+    .facebook i,
+    .whatsapp i,
+    .instagram i,
+    .telegram i {
+        margin: 10px 8px;
+        font-size: 23px;
+        padding: 10px;
+    }
+
+    .facebook i {
+        padding: 10px 13px;
+    }
+
+    .contact-body {
+        width: 75%;
+        height: auto;
+        padding: 20px;
+        margin-top: 320px;
+        margin-right: 10px;
+    }
+
+    .contact-body button {
+        width: 40%;
+        font-size: 16px;
+        padding: 15px;
+        margin: 10px 0px;
+        margin-left: auto;
+    }
+
+    .contact-name input,
+    .contact-email input,
+    .contact-phone input,
+    .contact-message textarea {
+        width: 90%;
+        height: auto;
+        margin-left: -5px;
+    }
+}
+
+/* Styles for screens between 426px and 480px */
+@media screen and (min-width: 426px) and (max-width: 480px) {
+    .contact-header h1 {
+        font-size: 32px;
+    }
+
+    .contact-body {
+        width: 80%;
+        margin-top: 300px;
+    }
+
+    .follow {
+        bottom: -450px;
+    }
+}
+
+/* Styles for screens up to 425px */
+@media screen and (max-width: 425px) {
+    .contact-bg {
+        background-attachment: fixed;
+    }
+
+    .contact-header h1 {
+        font-size: 35px;
+        text-align: center;
+        margin-top: 15px;
+    }
+
+    .contact-form {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .media {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .drop-me h1 {
+        font-size: 40px;
+        text-align: center;
+        margin-top: -5px;
+    }
+
+    .drop-me p {
+        white-space: nowrap;
+        font-size: 16px;
+        text-align: center;
+        margin-left: 10px;
+    }
+
+    .phone,
+    .message,
+    .location {
+        text-align: left;
+        margin-left: 20px;
+    }
+
+    .location span {
+        position: absolute;
+        font-size: 16px;
+    }
+
+    .follow {
+        white-space: nowrap;
+        position: absolute;
+        bottom: -300px;
+        flex-direction: row;
+        align-items: center;
+        text-align: left;
+        margin: 5px;
+        margin-left: 20px;
+        width: 85%;
+    }
+
+    .follow h1 {
+        font-size: 30px;
+        margin-left: 10px;
+    }
+
+    .follow-me {
+        white-space: nowrap;
+    }
+
+    .facebook i,
+    .whatsapp i,
+    .instagram i,
+    .telegram i {
+        margin: 10px 8px;
+        font-size: 30px;
+        padding: 10px;
+    }
+
+    .facebook i {
+        padding: 10px 15px;
+    }
+
+    .contact-body {
+        width: 75%;
+        height: auto;
+        padding: 20px;
+        margin-top: 350px;
+        margin-right: 5px;
+    }
+
+    .contact-body button {
+        width: 40%;
+        font-size: 16px;
+        padding: 15px;
+        margin: 10px 0px;
+        margin-left: auto;
+    }
+
+    .contact-name input,
+    .contact-email input,
+    .contact-phone input,
+    .contact-message textarea {
+        width: 90%;
+        height: auto;
+        margin-left: -5px;
+    }
+}
+
+
+@media screen and (max-width: 380px) {
+    .contact-bg {
+        background-attachment: fixed;
+    }
+    .contact-header h1 {
+        font-size: 30px !important;
+        text-align: center;
+        margin-top: 15px;
+    }
+
+    .contact-form {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .media {
+        margin-left: 0;
+        text-align: center;
+    }
+
+
+    .drop-me h1{
+        font-size: 28px;
+        margin-left: 5px;
+        margin-top: -5px;
+    }
+
+    .drop-me p {
+        white-space: nowrap;
+        font-size: 13px !important;
+        text-align: center;
+        margin: 0 auto; 
+        margin-left: -20px;
+        margin-bottom: 5px;
+    }
+    .phone,
+    .message,
+    .location {
+        text-align: left;
+        margin-left: -10px;
+
+    }
+
+    .phone span,
+    .message span{
+        font-size: 18px;
+    }
+
+    .location span {
+        position: absolute;
+        font-size: 16px;
+    }
+
+
+    .follow {
+        white-space: nowrap;
+        position: absolute;
+        bottom: -280px !important;
+        flex-direction: row;
+        align-items: center;
+        text-align: left;
+        margin: 5px;
+        width: 84%;
+        margin-left: -15px;
+    }
+
+    .follow h1 {
+        font-size: 25px !important;
+        margin-left: 15px;
+    }
+
+    .facebook i,
+    .whatsapp i,
+    .instagram i,
+    .telegram i {
+        font-size: 28px !important;
+        padding: 5px;
+    }
+
+    .facebook i {
+        padding: 5px 8px;
+    }
+
+    .contact-body {
+        width: 70%;
+        height: 55vh;
+        margin-top: 280px !important;
+        margin-right: 5px;
+    }
+
+    .contact-name input,
+    .contact-email input,
+    .contact-phone input,
+    .contact-message textarea {
+        width: 85% !important;
+        height: 1vh !important;
+        margin-left: -4px;
+    }
+
+    .contact-body button {
+        width: 50% !important;
+        height: auto;
+        margin-top: -2px;
+        font-size: 15px !important;
+    }
+}
+
+@media screen and (max-width: 320px) {
+
+    .contact-bg {
+        background-attachment: fixed;
+    }
+    .contact-header h1 {
+        font-size: 30px !important;
+        text-align: center;
+        margin-top: 15px;
+    }
+
+    .contact-form {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .media {
+        margin-left: 0;
+        text-align: center;
+    }
+
+
+    .drop-me h1{
+        font-size: 25px;
+        margin-left: 5px;
+        margin-top: -5px;
+    }
+
+    .drop-me p {
+        white-space: nowrap;
+        font-size: 12px !important;
+        text-align: center;
+        margin: 0 auto; 
+        margin-left: -10px;
+        line-height: 15px;
+        margin-bottom: 10px;
+
+    }
+    .phone,
+    .message,
+    .location {
+        text-align: left;
+        margin-left: -2px;
+    }
+
+    .phone span,
+    .message span{
+        font-size: 15px;
+    }
+
+    .location span {
+        position: absolute;
+        font-size: 14px;
+    }
+
+
+    .follow {
+        white-space: nowrap;
+        position: absolute;
+        bottom: -235px !important;
+        flex-direction: row;
+        align-items: center;
+        text-align: left;
+        margin: 5px;
+        margin-left: -3px;
+        width: 85%;
+    }
+
+    .follow h1 {
+        font-size: 20px !important;
+        margin-left: 10px;
+    }
+
+    .facebook i,
+    .whatsapp i,
+    .instagram i,
+    .telegram i {
+        font-size: 22px !important;
+        padding: 6px;
+    }
+
+    .facebook i {
+        padding: 6px 8px;
+    }
+
+    .contact-body {
+        width: 70%;
+        height: 50vh;
+        margin-top: 280px !important;
+        margin-right: 5px;
+    }
+
+    .contact-name input,
+    .contact-email input,
+    .contact-phone input,
+    .contact-message textarea {
+        width: 85% !important;
+        height: 1vh !important;
+        margin-left: -4px;
+    }
+
+    .contact-message textarea{
+        padding-bottom: 80px;
+    }
+
+    .contact-body button {
+        width: 50% !important;
+        height: auto;
+        margin-top: -2px;
+        font-size: 15px !important;
+    }
+}

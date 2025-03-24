@@ -1,0 +1,798 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Page Wipe Animation */
+.page-wipe-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    z-index: 999;
+    pointer-events: none;
+    /* Ensures it doesn’t block clicks */
+}
+
+.page-wipe-piece {
+    flex: 1;
+    height: 100%;
+    background: #000;
+    /* Change to match your theme */
+}
+
+
+
+
+.about-bg {
+    background:
+        radial-gradient(circle at bottom left, hsl(300, 100%, 33%), transparent 90%),
+        radial-gradient(circle at top right, #00aabb, transparent 80%),
+        linear-gradient(135deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.785) 100%),
+        url('../photos/pattern3.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    box-shadow: inset 0 0 100px rgba(255, 255, 255, 0);
+
+
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.about-me {
+    color: white;
+    margin: 50px 90px;
+    font-size: 21px;
+    animation: slideUp 1s ease-in forwards;
+    /* Staggered effect */
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+
+.about-me1 h1 {
+    margin-left: 160px;
+    font-weight: 900;
+    color: rgb(255, 255, 255);
+}
+
+.about-me1 p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+.about-me1 span {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.about-me button {
+    position: relative;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 20px;
+    font-size: 20px;
+    color: black;
+    /* Default text color */
+    background: #ddd;
+    /* Default background */
+    overflow: hidden;
+    cursor: pointer;
+    transition: color 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+}
+
+.about-me button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: #ff00ff;
+    /* Target background color */
+    transition: left 0.4s ease-in-out;
+    z-index: 0;
+}
+
+.about-me button:hover::before {
+    left: 0;
+    /* Moves the background from left to right */
+}
+
+.about-me button span {
+    position: relative;
+    z-index: 1;
+    transition: color 0.4s ease-in-out;
+}
+
+.about-me button:hover span {
+    color: white;
+    /* Changes text color to white */
+}
+
+
+
+.hexo img {
+    position: absolute;
+    right: 10%;
+    top: 30%;
+    width: 30%;
+    height: 60vh;
+    filter: drop-shadow(0 15px 10px #0ff) drop-shadow(0 0 20px #ff00ff);
+
+    /* Apply animation */
+    animation: rotate-once 1.5s ease-out;
+}
+
+@keyframes rotate-once {
+    from {
+        transform: rotateY(180deg);
+    }
+
+    to {
+        transform: rotateY(0deg);
+    }
+}
+
+
+
+
+.myskill {
+    display: flex;
+    justify-content: center;
+}
+
+.myskill h2 {
+    color: rgb(255, 255, 255);
+    font-size: 50px;
+    font-weight: 900;
+}
+
+
+
+
+.about-skill1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 150px;
+    margin-bottom: 20px;
+}
+
+.python-logo {
+    text-align: center;
+    /* Center the text */
+    background: linear-gradient(#ff00ff, #00eaff, black);
+    /* Add background to create a box */
+    padding: 20px 50px 40px;
+    /* Add padding to the box */
+    border-radius: 10px;
+    /* Optional: Add rounded corners */
+}
+
+
+
+.python-logo p {
+    margin-top: 10px;
+    /* Add some space above the text */
+    color: white;
+    /* Ensure the text is visible */
+    font-size: 20px;
+    /* Adjust font size as needed */
+    font-weight: bold;
+}
+
+
+.python-logo img {
+    width: 100%;
+    height: 15vh;
+    /* padding: 20px 20px 80px;
+    background:linear-gradient(#ff00ff,#00eaff,black); */
+}
+
+
+.node-logo {
+    text-align: center;
+    /* Center the text */
+    background: linear-gradient(#ff00ff, #00eaff, black);
+    /* Add background to create a box */
+    padding: 30px 50px 40px;
+    /* Add padding to the box */
+    border-radius: 10px;
+    /* Optional: Add rounded corners */
+}
+
+.node-logo img {
+    width: 100%;
+    /* Match the width of the Python logo */
+    height: 20vh;
+    /* Match the height of the Python logo */
+    margin-top: -20px;
+}
+
+.node-logo p {
+    margin-top: -20px;
+    /* Add some space above the text */
+    color: white;
+    /* Ensure the text is visible */
+    font-size: 20px;
+    /* Adjust font size as needed */
+    font-weight: bold;
+}
+
+.html-logo {
+    text-align: center;
+    /* Center the text */
+    background: linear-gradient(#ff00ff, #00eaff, black);
+    /* Add background to create a box */
+    padding: 20px 50px 40px;
+    /* Add padding to the box */
+    border-radius: 10px;
+    /* Optional: Add rounded corners */
+}
+
+.html-logo img {
+    width: 100%;
+    height: 15vh;
+}
+
+.html-logo p {
+    margin-top: 10px;
+    /* Add some space above the text */
+    color: white;
+    /* Ensure the text is visible */
+    font-size: 20px;
+    /* Adjust font size as needed */
+    font-weight: bold;
+}
+
+.about-skill2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 145px;
+    margin-bottom: 20px;
+
+}
+
+.css-logo {
+    text-align: center;
+    /* Center the text */
+    background: linear-gradient(#ff00ff, #00eaff, black);
+    /* Add background to create a box */
+    padding: 20px 50px 40px;
+    /* Add padding to the box */
+    border-radius: 10px;
+    /* Optional: Add rounded corners */
+}
+
+.css-logo img {
+    width: 100%;
+    height: 15vh;
+}
+
+.css-logo p {
+    margin-top: 10px;
+    /* Add some space above the text */
+    color: white;
+    /* Ensure the text is visible */
+    font-size: 20px;
+    /* Adjust font size as needed */
+    font-weight: bold;
+}
+
+
+
+.java-logo {
+    text-align: center;
+    /* Center the text */
+    background: linear-gradient(#ff00ff, #00eaff, black);
+    /* Add background to create a box */
+    padding: 20px 48px 40px;
+    /* Add padding to the box */
+    border-radius: 10px;
+    /* Optional: Add rounded corners */
+}
+
+.java-logo p {
+    margin-top: 10px;
+    /* Add some space above the text */
+    color: white;
+    /* Ensure the text is visible */
+    font-size: 20px;
+    /* Adjust font size as needed */
+    font-weight: bold;
+}
+
+.java-logo img {
+    width: 100%;
+    height: 15vh;
+}
+
+.reactt-logo {
+    text-align: center;
+    /* Center the text */
+    background: linear-gradient(#ff00ff, #00eaff, black);
+    /* Add background to create a box */
+    padding: 20px 48px 40px;
+    /* Add padding to the box */
+    border-radius: 10px;
+    /* Optional: Add rounded corners */
+}
+
+.reactt-logo p {
+    margin-top: 10px;
+    /* Add some space above the text */
+    color: white;
+    /* Ensure the text is visible */
+    font-size: 20px;
+    /* Adjust font size as needed */
+    font-weight: bold;
+}
+
+.reactt-logo img {
+    width: 100%;
+    height: 15vh;
+
+}
+
+.python-logo:hover,
+.node-logo:hover,
+.css-logo:hover,
+.java-logo:hover,
+.html-logo:hover,
+.reactt-logo:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+    opacity: 0.8;
+}
+
+/* Responsive: Tablet (768px - 1024px) */
+@media screen and (max-width: 1024px) {
+    .about-me {
+        margin: 30px;
+        font-size: 17px;
+    }
+
+    .about-me1 h1 {
+        font-size: 28px;
+    }
+
+    .about-me1 p {
+        font-size: 17px;
+    }
+
+    .hexo img {
+        width: 25%;
+        height: auto;
+        right: 5%;
+        top: 30%;
+        position: absolute;
+    }
+
+    .myskill h2 {
+        font-size: 28px;
+    }
+
+    .about-skill1,
+    .about-skill2 {
+        gap: 25px;
+    }
+
+    .python-logo,
+    .node-logo,
+    .css-logo,
+    .java-logo,
+    .reactt-logo {
+        width: 20%;
+        height: auto;
+        padding: 10px;
+    }
+
+    .html-logo{
+        width: 15%;
+        height: auto;
+    }
+
+    .python-logo img,
+    .node-logo img,
+    .html-logo img,
+    .css-logo img,
+    .java-logo img,
+    .reactt-logo img {
+        width: 50%;
+        height: auto;
+    }
+}
+
+/* Mobile: 750px and below */
+@media screen and (max-width: 780px) {
+    .about-me {
+        margin: 20px;
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .about-me1 h1 {
+        margin-left: 10px;
+        font-size: 24px;
+        text-align: center;
+
+    }
+
+    .about-me1 p {
+        margin-top: 220px;
+        font-size: 16px;
+    }
+
+    .about-me1 span {
+        font-size: 35px;
+    }
+
+    .about-me button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    .hexo img {
+        width: 25%;
+        right: 36%;
+        top: 20%;
+    }
+
+    .myskill h2 {
+        font-size: 26px;
+    }
+
+    .about-skill1,
+    .about-skill2 {
+        flex-direction: row;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .python-logo,
+    .node-logo,
+    .html-logo,
+    .css-logo,
+    .java-logo,
+    .reactt-logo {
+        width: 25vw;
+        max-width: 100px;
+        padding: 10px 15px 20px;
+    }
+
+    .python-logo img,
+    .html-logo img,
+    .css-logo img,
+    .java-logo img,
+    .reactt-logo img {
+        width: 55%;
+        height: auto;
+    }
+
+    .node-logo img {
+        width: 60%;
+        height: 17vh;
+
+    }
+
+    /* Tablet and below */
+    .python-logo:hover,
+    .node-logo:hover,
+    .css-logo:hover,
+    .java-logo:hover,
+    .html-logo:hover,
+    .reactt-logo:hover {
+        transform: none !important;
+        opacity: 1 !important;
+    }
+
+    .page-wipe-container {
+        height: 100vh;
+    }
+
+    .about-bg {
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+/* Small Mobile: 480px and below */
+@media screen and (max-width: 480px) {
+    .about-me {
+        margin: 10px;
+        font-size: 15px;
+        text-align: justify;
+        white-space: nowrap;
+    }
+
+    .about-me1 h1 {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .about-me p {
+        line-height: 30px;
+    }
+
+
+
+    .about-me1 p {
+        margin-top: 320px;
+        font-size: 15px;
+    }
+
+    .about-me1 span {
+        font-size: 30px;
+    }
+
+    .about-me button {
+        font-size: 12px;
+        padding: 15px 20px;
+    }
+
+    .hexo img {
+        width: 60%;
+        height: auto;
+        right: 20%;
+        top: 20%;
+    }
+
+    .myskill h2 {
+        font-size: 22px;
+    }
+
+    .about-skill1,
+    .about-skill2 {
+        flex-direction: row;
+        gap: 20px;
+        align-items: center;
+    }
+
+
+
+    .python-logo {
+        width: 20vw;
+        height: 10vh;
+        max-width: 120px;
+        max-height: 80px;
+        margin: 10px;
+    }
+
+    .python-logo p {
+        font-size: 18px;
+        margin: 6px 0;
+    }
+
+    .node-logo {
+        width: 20vw;
+        height: 10vh;
+        max-width: 120px;
+        max-height: 80px;
+    }
+
+    .node-logo img {
+        width: 55%;
+        height: auto;
+        margin-top: -5px;
+        margin-bottom: 10px;
+        margin-left: -5px;
+    }
+
+    .node-logo p {
+        font-size: 18px;
+        margin-top: -16px;
+    }
+
+    .html-logo {
+        width: 20vw;
+        height: 10vh;
+        max-width: 120px;
+        max-height: 80px;
+        margin-right: 10px;
+    }
+
+
+    .html-logo p {
+        font-size: 18px;
+        margin-top: 1px;
+    }
+
+
+    .css-logo {
+        width: 20vw;
+        height: 10vh;
+        max-width: 120px;
+        max-height: 80px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .css-logo img {
+        width: 55%;
+        height: auto;
+        margin-top: 7px;
+    }
+
+    .css-logo p {
+        font-size: 18px;
+        margin-top: 1px;
+    }
+
+    .java-logo {
+        width: 20vw;
+        height: 10vh;
+        max-width: 120px;
+        max-height: 80px;
+        margin-left: -8px;
+    }
+
+    .java-logo img {
+        width: 60%;
+        height: auto;
+    }
+
+    .java-logo p {
+        font-size: 16px;
+        margin-left: -2px;
+        margin-top: 1px;
+    }
+
+    .reactt-logo {
+        width: 20vw;
+        height: 10vh;
+        max-width: 120px;
+        max-height: 80px;
+        margin-right: 10px;
+    }
+
+    .reactt-logo img {
+        width: 55%;
+        height: auto;
+        margin-top: 7px;
+    }
+
+    .reactt-logo p {
+        font-size: 18px;
+        margin-top: -6px;
+    }
+
+    .python-logo:hover,
+    .node-logo:hover,
+    .css-logo:hover,
+    .java-logo:hover,
+    .html-logo:hover,
+    .reactt-logo:hover {
+        transform: none !important;
+        opacity: 1 !important;
+    }
+}
+
+/* Small Mobile: 480px and below */
+@media screen and (max-width: 320px) {
+    .about-me {
+        margin: 15px;
+        font-size: 12px;
+
+    }
+
+    .about-me1 h1 {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .about-me p {
+        line-height: 20px;
+        margin-right: 10px;
+
+
+    }
+
+    .about-me1 p {
+        margin-top: 250px;
+        font-size: 12px;
+    }
+
+    .about-me1 span {
+        font-size: 30px;
+    }
+
+    .about-me button {
+        font-size: 12px;
+        padding: 15px 20px;
+    }
+
+    .hexo img {
+        width: 70%;
+        height: auto;
+        right: 10%;
+        top: 20%;
+    }
+
+    .myskill h2 {
+        font-size: 22px;
+    }
+
+    .about-skill1,
+    .about-skill2 {
+        flex-direction: row;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .python-logo,
+    .node-logo,
+    .html-logo,
+    .css-logo,
+    .java-logo,
+    .reactt-logo {
+        width: 20vw;
+        height: 10vh;
+        max-width: 120px;
+        max-height: 80px;
+        padding: 8px;
+    }
+
+    .python-logo:hover,
+    .node-logo:hover,
+    .css-logo:hover,
+    .java-logo:hover,
+    .html-logo:hover,
+    .reactt-logo:hover {
+        transform: none !important;
+        opacity: 1 !important;
+    }
+
+    .python-logo img,
+    .node-logo img,
+    .html-logo img,
+    .css-logo img,
+    .java-logo img,
+    .reactt-logo img {
+        width: 70%;
+        height: auto;
+    }
+
+    .python-logo p {
+        font-size: 14px;
+
+    }
+
+    .node-logo p {
+        font-size: 14px;
+        margin-top: -20px;
+
+    }
+
+    .html-logo p {
+        font-size: 14px;
+    }
+
+    .css-logo p {
+        font-size: 14px;
+    }
+
+    .java-logo p {
+        font-size: 14px;
+        margin-top: 3px;
+    }
+
+    .reactt-logo p {
+        font-size: 14px;
+    }
+}
